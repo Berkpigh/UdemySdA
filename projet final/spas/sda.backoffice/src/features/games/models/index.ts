@@ -9,6 +9,7 @@ export interface Character {
  * Partie de jeu
  */
 export interface Game {
+    id: number;
     persoChoisi: Character;
     success: boolean;
 };

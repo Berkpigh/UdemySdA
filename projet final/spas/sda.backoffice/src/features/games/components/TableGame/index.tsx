@@ -1,12 +1,13 @@
 import { Table } from "react-bootstrap";
+import { Games } from "../../models";
 
 export type TableGameProp = {
-  items: string[];
+  items: Games;
 };
 
 export const TableGame = (props: TableGameProp) => {
   console.info(props);
-    const listRows = props.items.map(perso => <tr><td>{perso}</td><td>Success</td></tr>)
+    const listRows = props.items.map(game => <tr key={game.id}><td>{game.persoChoisi.surname}</td><td>{game.success.toString()}</td></tr>)
 
   const composant = (
     <>

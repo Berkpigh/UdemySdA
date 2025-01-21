@@ -1,13 +1,14 @@
 import { Row, Col } from "react-bootstrap"
 import { TableGame } from "../TableGame"
+import { Games } from "../../models"
+import { getListGame } from "../../services"
 
 /**
  * Composant représeantant un tableau des games à gérer
  * @returns 
  */
 export const ListGame = () => {
-    console.info('Mon composant')
-    const list: string[] = ['Aragorn', 'Legolas']
+    const list: Games = getListGame()
     
     const monComposant = (
         <>
@@ -18,6 +19,8 @@ export const ListGame = () => {
         </Row>
         </>
     )
+
     console.info(monComposant)
+    
     return monComposant
 }
