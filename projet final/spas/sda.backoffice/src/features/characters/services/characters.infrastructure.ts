@@ -33,10 +33,12 @@ async function getRawApi(): Promise<ApiReturnType> {
 async function getAllCharactersByApiGeneric(rawApi: () => Promise<ApiReturnType>): Promise<Characters> {
     const resultApi = await rawApi()
 
-    return resultApi.docs.map(doc => ({
+    return resultApi.docs.map( doc =>  (        
+        {       
         id: doc._id,
         name: doc.name
-    }))
+        }
+    ))
 }
 
 export async function getAllCharactersByApi(): Promise<Characters> {
