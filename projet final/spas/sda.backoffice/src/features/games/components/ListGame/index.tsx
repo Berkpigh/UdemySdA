@@ -28,10 +28,10 @@ export const ListGame = () => {
   };
 
   const changeStateListGame = (id: number, newState: boolean) => {
-    const newVersionList = [... list]
-   const element = newVersionList.find(item => item.id === id) 
+  const newVersionList = [... list]
+  const element = newVersionList.find(item => item.id === id) 
 
-   if (element) {
+  if (element) {
     element.success = newState
    }
    setList(newVersionList)
