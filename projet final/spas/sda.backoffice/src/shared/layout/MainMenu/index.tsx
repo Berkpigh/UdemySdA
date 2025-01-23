@@ -14,6 +14,7 @@ export const MainMenu = () => {
             <Nav className="me-auto">
               <Nav.Link as={Link} to="/">Accueil</Nav.Link>
               <Nav.Link as={Link} to="/characters">Les personnages</Nav.Link>
+              <Nav.Link as={Link} to="/games">Les parties</Nav.Link>
               <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
