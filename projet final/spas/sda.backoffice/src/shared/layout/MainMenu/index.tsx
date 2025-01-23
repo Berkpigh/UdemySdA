@@ -1,5 +1,5 @@
 import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap"
-
+import { Link } from "react-router-dom"
 /**
  * Menu principal de l'application
  */
@@ -8,12 +8,12 @@ export const MainMenu = () => {
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+          <Navbar.Brand as={Link} to="/">Seigneur des Anneaux</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">Link</Nav.Link>
+              <Nav.Link as={Link} to="/">Accueil</Nav.Link>
+              <Nav.Link as={Link} to="/characters">Les personnages</Nav.Link>
               <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
