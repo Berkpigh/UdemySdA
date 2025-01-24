@@ -14,6 +14,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\sda.backend.minimalapi.Core.Games.Models\sda.backend.minimalapi.Core.Games.Models.csproj" />
+    <ProjectReference Include="..\sda.backend.minimalapi.Core.Games.Services\sda.backend.minimalapi.Core.Games.Services.csproj" />
+    <ProjectReference Include="..\sda.backend.minimalapi.ui.Interfaces\sda.backend.minimalapi.Core.Games.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>

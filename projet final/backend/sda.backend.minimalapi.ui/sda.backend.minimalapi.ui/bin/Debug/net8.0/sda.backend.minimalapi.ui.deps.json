@@ -11,7 +11,9 @@
           "Microsoft.AspNetCore.OpenApi": "8.0.11",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.7",
           "Swashbuckle.AspNetCore": "6.9.0",
-          "sda.backend.minimalapi.Core.Games.Models": "1.0.0"
+          "sda.backend.minimalapi.Core.Games.Interfaces": "1.0.0",
+          "sda.backend.minimalapi.Core.Games.Models": "1.0.0",
+          "sda.backend.minimalapi.Core.Games.Services": "1.0.0"
         },
         "runtime": {
           "sda.backend.minimalapi.ui.dll": {}
@@ -1551,9 +1553,26 @@
           }
         }
       },
+      "sda.backend.minimalapi.Core.Games.Interfaces/1.0.0": {
+        "dependencies": {
+          "sda.backend.minimalapi.Core.Games.Models": "1.0.0"
+        },
+        "runtime": {
+          "sda.backend.minimalapi.Core.Games.Interfaces.dll": {}
+        }
+      },
       "sda.backend.minimalapi.Core.Games.Models/1.0.0": {
         "runtime": {
           "sda.backend.minimalapi.Core.Games.Models.dll": {}
+        }
+      },
+      "sda.backend.minimalapi.Core.Games.Services/1.0.0": {
+        "dependencies": {
+          "sda.backend.minimalapi.Core.Games.Interfaces": "1.0.0",
+          "sda.backend.minimalapi.Core.Games.Models": "1.0.0"
+        },
+        "runtime": {
+          "sda.backend.minimalapi.Core.Games.Services.dll": {}
         }
       }
     }
@@ -2425,7 +2444,17 @@
       "path": "system.windows.extensions/7.0.0",
       "hashPath": "system.windows.extensions.7.0.0.nupkg.sha512"
     },
+    "sda.backend.minimalapi.Core.Games.Interfaces/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "sda.backend.minimalapi.Core.Games.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "sda.backend.minimalapi.Core.Games.Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

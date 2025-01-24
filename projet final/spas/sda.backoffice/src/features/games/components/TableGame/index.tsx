@@ -37,6 +37,6 @@ export const TableGame = (props: TableGameProp) => {
       </Table>
     </>
   );
-  console.info("Table ?", composant);
+  // console.info("Table ?", composant);
   return composant;
 };

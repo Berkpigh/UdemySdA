@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.OpenApi;
+using sda.backend.minimalapi.Core.Games.Interfaces;
 using sda.backend.minimalapi.Core.Games.Models;
 namespace sda.backend.minimalapi.ui;
 
@@ -9,9 +10,9 @@ public static class GameEndpoints
     {
         var group = routes.MapGroup("/api/Game").WithTags(nameof(Game));
 
-        group.MapGet("/", () =>
+        group.MapGet("/", (IGetAllGameService service) =>
         {
-            return new [] { new Core.Games.Models.Game() };
+            return service.GetAll();
         })
         .WithName("GetAllGames")
         .WithOpenApi();

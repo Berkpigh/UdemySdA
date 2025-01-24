@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "sda.backend.minimalapi.Core.Games.Services/1.0.0": {
+        "dependencies": {
+          "sda.backend.minimalapi.Core.Games.Interfaces": "1.0.0",
+          "sda.backend.minimalapi.Core.Games.Models": "1.0.0"
+        },
+        "runtime": {
+          "sda.backend.minimalapi.Core.Games.Services.dll": {}
+        }
+      },
+      "sda.backend.minimalapi.Core.Games.Interfaces/1.0.0": {
+        "dependencies": {
+          "sda.backend.minimalapi.Core.Games.Models": "1.0.0"
+        },
+        "runtime": {
+          "sda.backend.minimalapi.Core.Games.Interfaces.dll": {}
+        }
+      },
+      "sda.backend.minimalapi.Core.Games.Models/1.0.0": {
+        "runtime": {
+          "sda.backend.minimalapi.Core.Games.Models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "sda.backend.minimalapi.Core.Games.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "sda.backend.minimalapi.Core.Games.Interfaces/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "sda.backend.minimalapi.Core.Games.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

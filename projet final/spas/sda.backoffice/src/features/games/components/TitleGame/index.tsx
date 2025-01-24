@@ -7,7 +7,7 @@ export const TitleGame = () => {
 
     const onClickToChangeTitle = () => {
         setTitle('Soyons fou !')
-        console.info(title)
+        // console.info(title)
     }
 
     const component = (
@@ -24,6 +24,6 @@ export const TitleGame = () => {
         </Row>
         </>
     )
-    console.info(component)
+    // console.info(component)
     return component
 }

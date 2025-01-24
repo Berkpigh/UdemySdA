@@ -8,3 +8,7 @@ Accept: application/json
 GET {{sda.backend.minimalapi.ui_HostAddress}}/weatherforecast
 
 ###
+
+GET {{sda.backend.minimalapi.ui_HostAddress}}/api/Game/
+
+###
