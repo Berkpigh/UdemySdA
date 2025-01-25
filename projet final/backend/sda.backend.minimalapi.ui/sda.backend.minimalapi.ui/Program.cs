@@ -1,6 +1,9 @@
 using sda.backend.minimalapi.Core.Games.Interfaces;
 using sda.backend.minimalapi.Core.Games.Services;
+using sda.backend.minimalapi.Core.Games.Services.Models;
 using sda.backend.minimalapi.ui;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -8,6 +11,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddDbContext<GameDbContext>(options =>
+{
+    string connectionString = "";
+    options.UseSqlServer(connectionString);
+});
 builder.Services.AddScoped<IGetAllGameService, FakeInMemoryGetAllGameService>();
 
 
