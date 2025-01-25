@@ -13,11 +13,11 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<GameDbContext>(options =>
 {
-    string connectionString = "";
+    string? connectionString = builder.Configuration.GetConnectionString("sda.backoffice.database");
     options.UseSqlServer(connectionString);
 });
-builder.Services.AddScoped<IGetAllGameService, FakeInMemoryGetAllGameService>();
-
+//builder.Services.AddScoped<IGetAllGameService, FakeInMemoryGetAllGameService>();
+builder.Services.AddScoped<IGetAllGameService, SqlServerGetAllGameService>();
 
 var app = builder.Build();
 

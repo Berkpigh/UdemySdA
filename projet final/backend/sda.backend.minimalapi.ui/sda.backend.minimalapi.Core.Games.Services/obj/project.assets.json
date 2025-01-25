@@ -967,6 +967,7 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "8.0.1",
+          "Microsoft.EntityFrameworkCore.Relational": "8.0.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.1",
           "sda.backend.minimalapi.Core.Games.Models": "1.0.0"
         },
@@ -982,6 +983,7 @@
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "8.0.1",
+          "Microsoft.EntityFrameworkCore.Relational": "8.0.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.1"
         },
         "compile": {
@@ -2696,6 +2698,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "Microsoft.EntityFrameworkCore >= 8.0.1",
+      "Microsoft.EntityFrameworkCore.Relational >= 8.0.1",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.1",
       "sda.backend.minimalapi.Core.Games.Interfaces >= 1.0.0",
       "sda.backend.minimalapi.Core.Games.Models >= 1.0.0"
@@ -2754,6 +2757,10 @@
         "targetAlias": "net8.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[8.0.1, )"
+          },
+          "Microsoft.EntityFrameworkCore.Relational": {
             "target": "Package",
             "version": "[8.0.1, )"
           },
