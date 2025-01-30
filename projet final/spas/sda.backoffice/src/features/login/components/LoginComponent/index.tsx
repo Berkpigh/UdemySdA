@@ -1,7 +1,7 @@
 import { Row, Col } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import { TitleLogin } from "../TitleLogin";
-import business from "../../services/login.application";
+import business from "../../../authentication/services/authentication.application";
 
 /**
  * Composant de login

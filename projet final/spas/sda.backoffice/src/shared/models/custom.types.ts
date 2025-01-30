@@ -3,4 +3,4 @@
  */
 export type GetAll<T> = () => Promise<T>
 
-export type PostRequest<T> = () => Promise<T>
+export type PostOne<U, T> = (item: U) => Promise<T>
