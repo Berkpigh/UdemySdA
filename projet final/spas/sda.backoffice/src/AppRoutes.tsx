@@ -7,6 +7,7 @@ import { PageHome } from "./pages/PageHome";
 export const MainRoutes = () => {
   return (
     <Routes>
+      {/* <PrivateRoute></PrivateRoute> */}
       <Route path="/" element={<PageHome></PageHome>} />
       <Route path="/characters" element={<PageListCharacters></PageListCharacters>} />
       <Route path="/games" element={<PageListGame></PageListGame>} />
