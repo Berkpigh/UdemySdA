@@ -5,8 +5,9 @@ import {
   AuthenticationState,
   AuthenticationStateWithLogin,
 } from "../store";
+import { PropswithChildren } from "../../../core/custom-type";
 
-export const AuthenticationContextProvider = () => {
+export const AuthenticationContextProvider = (props: PropswithChildren) => {
   const [userState, setUserState] = useState<AuthenticationState>(initialUserState);
 
   const logIn = (login: string, password: string) => {
@@ -31,6 +32,7 @@ export const AuthenticationContextProvider = () => {
 
   return (
     <AuthenticationContext.Provider value={newContext}>
+        {props.children}
     </AuthenticationContext.Provider>
   );
 };
