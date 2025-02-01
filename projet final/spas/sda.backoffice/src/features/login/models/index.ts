@@ -1,7 +1,7 @@
 /**
  * Infos de login
  */
-export type loginInfo {
+export type loginInfo = {
     email: string;
     password: string;
     twoFactorCode: string;

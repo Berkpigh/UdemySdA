@@ -2,7 +2,6 @@ import './App.css'
 import { MainRoutes } from './AppRoutes'
 import { AuthenticationContextProvider } from './features/authentication/components/AuthenticationProvider'
 // import { UseMyContext } from './learnings/useContextLearn/UseMyContext'
-import { LayoutComponent } from './learnings/useChildrenLearn/LayoutComponent'
 import { MainMenu } from './shared/layout/MainMenu'
 
 function App() {
@@ -21,10 +20,7 @@ function App() {
     <>
       <AuthenticationContextProvider>
         <MainMenu></MainMenu>
-        {/* {<UseMyContext></UseMyContext>} */}
-        <LayoutComponent>
-          <MainRoutes></MainRoutes>
-        </LayoutComponent>
+        <MainRoutes></MainRoutes>
       </AuthenticationContextProvider>
     </>
   )

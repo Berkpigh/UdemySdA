@@ -7,6 +7,16 @@ using sda.backend.minimalapi.Core.Auths.Models;
 using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllHeaders",
+    builder =>
+    {
+        builder.AllowAnyOrigin()
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+    });
+});
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -51,6 +61,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("AllowAllHeaders");
 
 app.UseHttpsRedirection();
 
