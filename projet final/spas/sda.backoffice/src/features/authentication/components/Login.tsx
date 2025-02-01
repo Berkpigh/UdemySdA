@@ -30,7 +30,7 @@ export const Login = () => {
 
     return (
         <>
-            <form onSubmit={submitForm}>
+            <form onSubmit={submitForm} method="post">
                 <div>
                     <div>
                         <label>Login</label>
@@ -38,7 +38,7 @@ export const Login = () => {
                     </div>
                     <div>
                         <label>Password</label>
-                        <input name="password" value={user.password} onChange={updatePassword}></input>
+                        <input type="password" name="password" value={user.password} onChange={updatePassword}></input>
                     </div>
                 </div>
                 <div>

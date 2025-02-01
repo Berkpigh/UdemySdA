@@ -7,8 +7,10 @@ import {
 } from "../store";
 import { PropswithChildren } from "../../../core/custom-type";
 import business from "../services/authentication.application";
+import { useNavigate } from "react-router-dom";
 
 export const AuthenticationContextProvider = (props: PropswithChildren) => {
+  const navigate = useNavigate()
   const [userState, setUserState] = useState<AuthenticationState>(initialUserState);
 
   const logIn = (login: string, password: string) => {
@@ -17,7 +19,8 @@ export const AuthenticationContextProvider = (props: PropswithChildren) => {
               setUserState({
                   user: {surname: user.surname, token: user.token},
                   status: 'loggedIn'
-              })
+            })
+          navigate('/')
     })
   };
 
