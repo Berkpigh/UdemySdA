@@ -6,7 +6,8 @@ export const Login = () => {
     const [user, setUser] = useState<LoginUser>({login: '', password: ''})
     const authContext = useAuthenticationContext()
 
-    const submitForm = () => {
+    const submitForm = (e: React.ChangeEvent<HTMLFormElement>) => {
+        e.preventDefault()
         if (authContext.logIn) {
             authContext.logIn(user.login, user.password)
         }

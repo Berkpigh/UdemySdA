@@ -20,7 +20,7 @@ export function factoryLoginUserBusiness(user: LoginUser): Promise<Authenticatio
 }
 
 const business = {
-    getAll: factoryLoginUserBusiness
+    logIn: factoryLoginUserBusiness
 }
 
 export default business
