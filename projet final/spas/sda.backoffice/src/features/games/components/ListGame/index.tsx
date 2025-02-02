@@ -3,7 +3,7 @@ import { TableGame } from "../TableGame";
 import { Games } from "../../models";
 import { TitleGame } from "../TitleGame";
 import { useState, useEffect } from "react";
-import business from '../../services/game.application';
+import business from "../../services/game.application";
 
 /**
  * Composant représeantant un tableau des games à gérer
@@ -14,15 +14,14 @@ export const ListGame = () => {
   const affichageTitre = true;
 
   useEffect(() => {
-    business.getAll().then(result => {
-        setList(result)
-    })
+    business.getAll().then((result) => {
+      setList(result);
+    });
 
     return () => {
-        // fonction de cleanup
-
-    }
-}, []) // Appel qu'une seule fois après le rendu initial
+      // fonction de cleanup
+    };
+  }, []); // Appel qu'une seule fois après le rendu initial
 
   const addGameCallback = () => {
     // list.push({
@@ -30,31 +29,41 @@ export const ListGame = () => {
     //})
 
     const nouvelElement = {
-      id: list.length + 1, persoChoisi: { surname: `test-${list.length + 1}`}, success: true
-    }
+      id: list.length + 1,
+      persoChoisi: { surname: `test-${list.length + 1}` },
+      success: true,
+    };
 
     setList([nouvelElement, ...list]);
-
-
   };
 
   const changeStateListGame = (id: number, newState: boolean) => {
-  const newVersionList = [... list]
-  const element = newVersionList.find(item => item.id === id) 
+    const newVersionList = [...list];
+    const element = newVersionList.find((item) => item.id === id);
 
-  if (element) {
-    element.success = newState
-   }
-   setList(newVersionList)
-  }
-  
-  const addGame = <Row><Col><button onClick={addGameCallback}>Nouvellle partie</button></Col></Row>
+    if (element) {
+      element.success = newState;
+    }
+    setList(newVersionList);
+  };
 
-    const monComposant = (
+  const addGame = (
+    <Row>
+      <Col>
+        <button onClick={addGameCallback}>Nouvellle partie</button>
+      </Col>
+    </Row>
+  );
+
+  const monComposant = (
     <>
       {affichageTitre && <TitleGame></TitleGame>}
-      { addGame }
-      <Row><Col><button onClick={addGameCallback}>Nouvelle partie</button></Col></Row>
+      {addGame}
+      <Row>
+        <Col>
+          <button onClick={addGameCallback}>Nouvelle partie</button>
+        </Col>
+      </Row>
       <Row>
         <Col md={2}>
           <TableGame items={list} changeState={changeStateListGame}></TableGame>
