@@ -2,9 +2,9 @@ import { ReactNode } from "react";
 
 type PropswithChildren<P = unknown> = P & { children: ReactNode };
 
-// type MonPropsCustomWithChildren = PropswithChildren & { item: string };
+//type MonPropsCustomWithChildren = PropswithChildren & { item: string };
 
-export const LayoutComponent = (props: CustomWithChildren) => {
+export const LayoutComponent = (props: PropswithChildren) => {
   return (
     <>
       <div>

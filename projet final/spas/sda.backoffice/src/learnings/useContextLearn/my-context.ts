@@ -1,10 +1,12 @@
 import { createContext, useContext } from "react";
 
 // 1. création du type de l'état
+// 1.a
 export interface ContextState {
     value: string;
 }
 
+// 1.b
 export interface ContextWithChangeState {
     item: ContextState,
     setItem: React.Dispatch<React.SetStateAction<ContextState>> | null
